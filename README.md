@@ -6,7 +6,7 @@ package com.spbu.shell;
  *
  * @author nuNox
  */
-public class SPBU {
+public final class SPBU {
     private String name;
     private String address;
     private int capacity;
@@ -58,7 +58,7 @@ package com.spbu.shell;
  */
 import java.util.ArrayList;
 
-public class SPBUManager {
+public final class SPBUManager {
     private final ArrayList<SPBU> spbuList;
 
     public SPBUManager() {
@@ -98,6 +98,10 @@ public class SPBUManager {
         choice = Integer.parseInt(System.console().readLine());
         return choice;
     }
+
+    public SPBU getSPBUByName(String name) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
 ```
 
@@ -125,7 +129,7 @@ package com.spbu.shell.crud;
  */
 import com.spbu.shell.SPBUManager;
 
-public class Main {
+public final class Main {
     public static void main(String[] args) {
         SPBUManager spbuManager = new SPBUManager();
         ShellCRUD shellCRUD = new ShellCRUD(spbuManager);
@@ -145,7 +149,7 @@ import com.spbu.shell.SPBU;
 import com.spbu.shell.SPBUManager;
 import java.util.Scanner;
 
-public class SPBU_CRUD implements CRUD {
+public final class SPBU_CRUD implements CRUD {
     private final SPBUManager spbuManager;
 
     public SPBU_CRUD(SPBUManager spbuManager) {
@@ -210,7 +214,7 @@ import com.spbu.shell.SPBUManager;
 
 import java.util.Scanner;
 
-public class ShellCRUD implements CRUD {
+public final class ShellCRUD implements CRUD {
     private final SPBUManager spbuManager;
     private final Scanner scanner;
 
