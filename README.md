@@ -1,3 +1,6 @@
+```
+Program ini membuat sistem CRUD (Create, Read, Update, Delete) untuk mengelola data SPBU. Kita dapat membuat, membaca, mengubah, dan menghapus data SPBU menggunakan menu yang disediakan. Program ini menggunakan inheritance, encapsulation, abstraction, dan interface untuk membuat sistem yang fleksibel dan mudah dipahami.
+```
 Kodingan
 ```
 package com.spbu.shell;
@@ -350,3 +353,38 @@ Langkah 5: Keluar dari Program
 - Pengguna memilih opsi Exit untuk keluar dari program.
 - Program menampilkan pesan "Exiting..." dan kemudian keluar dari program.
 ```
+```
+Berikut adalah class diagram dari program ini:
+
+- SPBU: Kelas ini merepresentasikan data SPBU yang terdiri dari nama, alamat, dan kapasitas.
+- SPBUManager: Kelas ini merepresentasikan manajer SPBU yang dapat melakukan operasi CRUD pada data SPBU.
+- CRUD: Interface ini merepresentasikan operasi CRUD yang dapat dilakukan pada data SPBU.
+- SPBU_CRUD: Kelas ini merepresentasikan implementasi operasi CRUD pada data SPBU.
+- ShellCRUD: Kelas ini merepresentasikan implementasi operasi CRUD pada data SPBU menggunakan shell.
+```
+```
+Inheritance
+
+Dalam program ini, kita menggunakan inheritance untuk membuat subclass SPBU_CRUD dan ShellCRUD yang mengextends interface CRUD. Ini memungkinkan kita untuk membuat objek yang dapat melakukan operasi CRUD pada data SPBU.
+```
+```
+Encapsulation
+
+Kita menggunakan encapsulation untuk menyembunyikan data SPBU dan membuatnya tidak dapat diakses langsung dari luar. Kita menggunakan getter dan setter untuk mengakses dan mengubah data SPBU. Contohnya, kita menggunakan getName() dan setName() untuk mengakses dan mengubah nama SPBU.
+```
+```
+Abstraction
+
+Kita menggunakan abstraction untuk membuat interface CRUD yang dapat diimplementasikan oleh subclass SPBU_CRUD dan ShellCRUD. Ini memungkinkan kita untuk membuat objek yang dapat melakukan operasi CRUD tanpa perlu mengetahui implementasi detailnya.
+```
+```
+Interface
+
+Kita menggunakan interface CRUD untuk membuat objek yang dapat melakukan operasi CRUD. Interface ini memiliki method create(), read(), update(), dan delete() yang dapat diimplementasikan oleh subclass.
+```
+```
+Final Keyword
+
+Kita menggunakan final keyword untuk membuat properti yang tidak dapat diubah setelah diinisialisasi. Contohnya, kita menggunakan private final ArrayList<SPBU> spbuList; untuk membuat list SPBU yang tidak dapat diubah setelah diinisialisasi.
+```
+
